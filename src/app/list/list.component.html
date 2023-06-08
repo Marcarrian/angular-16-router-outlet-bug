@@ -1,6 +1,9 @@
 <button (click)="openDetails('item-1')">Via Router: /list/(details:item-1)</button>
 <button (click)="openDetails('item-2')">Via Router: /list/(details:item-2)</button>
 <button (click)="openDetails(null)">Via Router: /list/(details:null)</button>
-<a [routerLink]="[{outlets: {details: ['item-1']}}]">Via RouterLink: /list/(details:item-1)</a>
-<a [routerLink]="[{outlets: {details: ['item-2']}}]">Via RouterLink: /list/(details:item-2)</a>
-<a [routerLink]="[{outlets: {details: null}}]">Via RouterLink: /list/(details:null)</a>
+<a [routerLink]="[{outlets: {details: ['item-1']}}]">Via RouterLink (relative): /list/(details:item-1)</a>
+<a [routerLink]="[{outlets: {details: ['item-2']}}]">Via RouterLink (relative): /list/(details:item-2)</a>
+<a [routerLink]="[{outlets: {details: null}}]">Via RouterLin (relative): /list/(details:null)</a>
+<a [routerLink]="['list', {outlets: {details: ['item-1']}}]" [relativeTo]="null">Via RouterLink (absolute): /list/(details:item-1)</a>
+<a [routerLink]="['list', {outlets: {details: ['item-2']}}]" [relativeTo]="null">Via RouterLink (absolute): /list/(details:item-2)</a>
+<a [routerLink]="['list', {outlets: {details: null}}]" [relativeTo]="null">Via RouterLink (absolute): /list/(details:null)</a>
